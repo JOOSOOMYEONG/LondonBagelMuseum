@@ -1,1 +1,55 @@
 /* 폰트 */
+
+.antonio-<uniquifier> {
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* 폰트 끝 */
+
+.main_container {
+    padding: 130px;
+    font-family: "Antonio", sans-serif;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 55px;
+}
+
+.logo > a > img {
+    width: 94px;
+}
+
+.header_right_box > i {
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.main_content {
+    text-align: center;
+    margin-top: 179px;
+}
+
+.main_content > h1 {
+    font-size: 169px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    letter-spacing: -5px;
+}
+
+.column_slider {
+    list-style: none;
+    max-width: 1660px;
+    max-height: 480px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
