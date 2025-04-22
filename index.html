@@ -7,7 +7,6 @@
     <title>LondonBagelMuseum</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/ab4f71209c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
@@ -23,10 +22,10 @@
                 </a>
             </figure>
             <figure class="header_right_box">
-                <i class="fa-solid fa-plus"></i>
+                <img src="./img/plus.img.png" alt="">
             </figure>
         </header>
-        <!-- 보더바텀 줄거임 -->
+
         <div class="main_content">
             <h1>
                 London Bagel Museum
@@ -37,6 +36,9 @@
                 </li>
                 <!-- <li>
                     <img src="./img/main_img2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./img/main_img3.jpg" alt="">
                 </li>
                 <li>
                     <img src="./img/main_img4.jpg" alt="">
@@ -51,45 +53,59 @@
             <h2>BEST MENU</h2>
             <ul>
                 <li>
-                    <figure>
-                        <img src="./img/1.png" alt="">
-                    </figure>
+                    <img src="./img/1.png" alt="">
                     <figure class="bagel_name">
+                        <!-- 메모 이미지는 배경 이미지로 적용 -->
                         <p>Potato Cheese Bagel</p>
-                        <p>감자 치즈 베이글</p>
+                        <p>감자 치즈 베이글</p> 
                     </figure>
                 </li>
-                <!-- <li>
-                    <figure>
-                        <img src="./img/2.png" alt="">
-                    </figure>
+                <li>
+                    <img src="./img/2.png" alt="">
                     <figure class="bagel_name">
                         <p>Pretzel Buter Bagel</p>
                         <p>프레첼 버터 베이글</p>
                     </figure>
                 </li>
                 <li>
-                    <figure>
-                        <img src="./img/3.png" alt="">
-                    </figure>
+                    <img src="./img/3.png" alt="">
                     <figure class="bagel_name">
                         <p>Spring Onion Bagel</p>
                         <p>쪽파 베이글</p>
                     </figure>
-                </li> -->
+                </li>
+                <li>
+                    <img src="./img/4.png" alt="">
+                    <figure class="bagel_name">
+                        <p>Pretzel Plain Bagel</p>
+                        <p>프레첼 플레인 베이글</p>
+                    </figure>
+                </li>
+                <li>
+                    <img src="./img/5.png" alt="">
+                    <figure class="bagel_name">
+                        <p>Cheese Honey Bagel</p>
+                        <p>치즈 허니 베이글</p>
+                    </figure>
+                </li>
+                <li>
+                    <img src="./img/6.png" alt="">
+                    <figure class="bagel_name">
+                        <p>Plain Bagel</p>
+                        <p>플레인 베이글</p>
+                    </figure>
+                </li>
             </ul>
         </section>
 
         <section class="menu_container">
             <div class="menu_bg">
-                <!-- 배경 이미지를 적용시켜 best_carousel_container 위 겹쳐 올라갈 수있게 만들어야 함 -->
+                <!-- 배경 이미지를 적용시켜 best_carousel_container 위에 겹쳐 올라갈 수있게 만들어야 함 -->
 
                 <!-- 베이글 시작 -->
                 <div class="menu_item_box">
                     <figure>
-                        <a href="#">
-                            <img src="./img/bagel_img.png" alt="">
-                        </a>
+                        <img src="./img/bagel_img.png" alt="">
                     </figure>
                     <div class="text_box">
                         <!-- 텍스트 왼쪽 정렬 -->
@@ -108,21 +124,21 @@
                 <!-- 베이글 끝 -->
 
                 <!-- 사이드 시작 -->
-                <figure class="side_text_img">
-                    <img src="./img/side_text_img.png" alt="">
-                </figure>
-                <figure>
-                    <a href="#">
+                <div>
+                    <figure class="side_text_img">
+                        <img src="./img/side_text_img.png" alt="">
+                    </figure>
+                    <figure>
                         <img src="./img/side_img.png" alt="">
-                    </a>
-                </figure>
-                <!-- side_txt 이미지랑 side 이미지가 겹칠 수 있어야 함 -->
+                    </figure>
+                </div>
+                <!-- side_text 이미지랑 side 이미지가 겹칠 수 있어야 함 -->
                  <!-- 사이드 끝 -->
     
                  <!-- 굿즈 시작 -->
                 <div class="menu_item_box">
                     <div class="text_box">
-                        <!-- 텍스트 오른쪽 정렬렬 -->
+                        <!-- 텍스트 오른쪽 정렬 -->
                         <h2>Goods</h2>
                         <p>
                             베이글과 감성이 만나는 공간, 런던 베이글 뮤지엄에서만 만나볼 수 있는 특별한 굿즈 컬렉션을 소개합니다.
@@ -139,9 +155,7 @@
                         </button>
                     </div>
                     <figure>
-                        <a href="#">
-                            <img src="./img/goods_img.png" alt="">
-                        </a>
+                        <img src="./img/goods_img.png" alt="">
                     </figure> 
                 </div>
                 <!-- 굿즈 끝 -->
@@ -149,9 +163,7 @@
                 <!-- 음료 시작 -->
                 <div class="menu_item_box">
                     <figure>
-                        <a href="#">
-                            <img src="./img/drink_img.png" alt="">
-                        </a>
+                        <img src="./img/drink_img.png" alt="">
                     </figure>
                     <div class="text_box">
                         <!-- 텍스트 왼쪽 정렬 -->
@@ -177,12 +189,14 @@
                     London Bagel Museum
                     <br>
                     Storage Guide
+                    <span class="star_img"></span>
                 </h2>
                 <p class="title_text_kr">보관 방법</p>
             </div>
 
             <!-- 탭 메뉴 시작 -->
             <div class="tabs_box">
+                <img src="" alt="">
                 <ul class="menu_tabs">
                     <li class="tab active" data-tab="1">
                         Bagel
@@ -205,7 +219,7 @@
                         3. 냉동 보관된 베이글은 실온에서 30~40분 자연 해동 후 180도 로 예열힌 오븐이나 에어프라이어에거 5분정도 구워드시면 맛있게 드실 수 있습니다! 전자레인지 사용 시 30초 (700W 기준) 정도 데워 맛있게 드셔주세요! 실온에서 1시간 정도 완전히 해동해 준 뒤 그대로 드셔도 맛있습니다! 
                     </p>
                     <figure class="tab_img">
-                        <img src="./img/tab_1.jpg" alt="">
+                        <img src="./img/tab_1.png" alt="">
                     </figure>
                 </div>
                 <div id="tab_2" class="tab_content">
@@ -213,7 +227,7 @@
                         구매하신 당근 라페와 코울슬로, 크림치즈는 꼭 냉장 보관 해주시고 구매한 날부터 이틀 안에 드세요!
                     </p>
                     <figure class="tab_img">
-                        <img src="./img/tab_2.jpg" alt="">
+                        <img src="./img/tab_2.png" alt="">
                     </figure>
                 </div>
                 <div id="tab_3" class="tab_content">
@@ -221,23 +235,30 @@
                         수프도 냉장 보관해주시고 구매한 당일이나 다음 날까지 드셔주세요! 따뜻하게 드시려면 전자레인지 전용 용기에 담아 2분 30초 정도 데우거나 냄비에 데울 시 약불에서 4분 정도 주걱으로 눌어붙지 않게 저어주면서 데워주세요!  (데운 수프 위에 치즈나 후추를 뿌려드시면 더 맛있게 드실 수 있어요!) 
                     </p>
                     <figure class="tab_img">
-                        <img src="./img/tab_3.jpg" alt="">
+                        <img src="./img/tab_3.png" alt="">
                     </figure>
                 </div>
             </div>
-            <!-- 탭 메튜 끝 -->
+            <!-- 탭 메뉴 끝 -->
         </section>
         
         <!-- 지점 찾기 -->
-        <section class="find_a_store_container">
+        <section class="store_container">
             <iframe src="" frameborder="0"></iframe>
-            <div class="find_a_store_text_box">
+            <div class="store_text">
                 <h2>
                     Find a Store
                 </h2>
                 <p class="title_text_kr">
                     지점 찾기
                 </p>
+            </div>
+
+            <div class="search_box">
+                <!-- search_box :  border 1px solid # -->
+                <input type="text" placeholder="위치검색">
+                <!-- input border none -->
+                <img src="" alt="돋보기">
             </div>
         </section>
     </main>
