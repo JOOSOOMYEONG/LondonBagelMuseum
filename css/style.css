@@ -84,3 +84,21 @@ h2 {
     font-style: normal;
     font-size: 72px;
     color: rgb(50, 40, 31);
+}
+
+/* 푸터 */
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #362C24;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info_texts {
+    display: flex;
+    justify-content: center;
+}
