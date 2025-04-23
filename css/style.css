@@ -28,6 +28,7 @@
   }
 /* 폰트 끝 */
 
+/* 메인 */
 .main_container {
     font-family: "Antonio", sans-serif;
     height: 100vh;
@@ -85,12 +86,64 @@ h2 {
     font-size: 72px;
     color: rgb(50, 40, 31);
 }
+/* 메인 끝 */
+
+/* 베스트 */
+.best_carousel_container {
+    background-image: url(/img/best_bg.png);
+    width: 100%;
+    height: 1510px;
+    position: relative;
+}
+
+.best_carousel_container > h2 {
+    text-align: center;
+    padding-top: 185px;
+}
+
+.carousel_box {
+    display: flex;
+
+}
+
+.carousel_box > li {
+    text-align: center;
+    align-items: center;
+}
+
+.bagel_name1 {
+    background: url(/img/memo1.png);
+    width: 240px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bagel_name2 {
+    background: url(/img/memo2.png);
+    width: 240px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bagel_name3 {
+    background: url(/img/memo3.png);
+    width: 240px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* 푸터 */
 
 footer {
     width: 100%;
-    height: 200px;
+    height: 270px;
     background-color: #362C24;
     color: #fff;
     display: flex;
@@ -98,7 +151,14 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+footer > figure {
+    padding-bottom: 50px;
+}
 .info_texts {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 60%;
+    padding-bottom: 20px;
 }
+/* 푸터 끝 */
