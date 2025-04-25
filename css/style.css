@@ -182,6 +182,7 @@ h2 {
     gap: 65px;
 }
 
+/*  */
 .text_box > h2, p {
     margin-bottom: 11px;
 }
@@ -189,7 +190,7 @@ h2 {
 .more_btn {
     border: none;
     margin-top: 26px;
-    padding: x;
+    padding: 12px 15px;
     background-color: #32281F;
     cursor: pointer;
 }
@@ -197,13 +198,14 @@ h2 {
 .more_btn > a {
     text-decoration: none;
     color: #fff;
-    /* padding: 15px; */
+    padding: 12px 15px;
 }
 
 .more_btn:hover {
     background-color: #634f3d;
     transform: 0.3s;
 }
+
 
 /* menu_container 끝 */
 
