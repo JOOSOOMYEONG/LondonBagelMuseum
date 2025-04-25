@@ -189,14 +189,15 @@ h2 {
 .more_btn {
     border: none;
     margin-top: 26px;
-    padding: 12px 31px;
+    padding: x;
     background-color: #32281F;
+    cursor: pointer;
 }
 
 .more_btn > a {
     text-decoration: none;
     color: #fff;
-
+    /* padding: 15px; */
 }
 
 .more_btn:hover {
