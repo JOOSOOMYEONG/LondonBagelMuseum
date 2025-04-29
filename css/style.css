@@ -248,6 +248,18 @@ h2 {
     margin-top: 290px;
     gap: 65px;
 }
+/* menu_goods_box 끝 */
+
+/* menu_drinks_box 시작 */
+.menu_drinks_box {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    margin-left: 400px;
+    margin-top: 300PX;
+}
+/* menu_drinks_box 끝 */
+
 /* menu_container 끝 */
 
 
