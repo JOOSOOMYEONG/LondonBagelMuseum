@@ -162,7 +162,7 @@ h2 {
 /* menu_container 시작 */
 .menu_container {
     position: relative;
-    height: 4389px;
+    height: 3600px;
 }
 
 .menu_bg {
@@ -174,38 +174,16 @@ h2 {
     top: -500px;
     padding-top: 480px;
 }
-
-/* menu_bagel_box */
-.menu_bagel_box {
-    display: flex;
-    align-items: center;
-    margin-left: 150px;
-    gap: 65px;
+/* text_box 시작 */
+.text_box > p,
+.text_box > h2,
+.goods_text_box > p,
+.goods_text_box > h2 { 
+    margin-bottom: 12px;
 }
-/* menu_bagel_box 끝 */
+/* text_box 끝 */
 
-.text_box > h2 {
-    margin-bottom: 11px;
-}
-
-.text_box > p {
-    margin-bottom: 11px;
-}
-
-.goods_text_box > h2 {
-    margin-bottom: 11px;
-    text-align: right;
-}
-
-.goods_text_box > p { 
-    margin-bottom: 11px;
-    text-align: right;
-}
-
-.goods_text_box >.more_btn {
-    margin-left: 688px;
-}
-
+/* more_btn 시작 */
 .more_btn {
     border: none;
     margin-top: 26px;
@@ -224,19 +202,32 @@ h2 {
     background-color: #634f3d;
     transform: 0.3s;
 }
+/* more_btn 끝 */
 
-/* menu_side_box */
-.side_text_img{
+/* menu_bagel_box */
+.menu_bagel_box {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    gap: 65px;
+}
+/* menu_bagel_box 끝 */
+
+/* menu_side_box 시작 */
+.menu_side_box {
     position: relative;
-    height: 713PX;
-    margin-left: 1300px;
+    height: 713px;
+}
+
+.side_text_img{
+    position: absolute;
+    right: 5%;
 }
 
 .side_img {
     position: absolute;
-    top: 1px;
-    padding-top: 1230PX;
-    margin-left: 1100PX;
+    right:10%;
+    top: 30%;
 }
 /* menu_side_box 끝 */
 
@@ -248,6 +239,13 @@ h2 {
     margin-top: 290px;
     gap: 65px;
 }
+
+.goods_text_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 /* menu_goods_box 끝 */
 
 /* menu_drinks_box 시작 */
@@ -259,12 +257,44 @@ h2 {
     margin-top: 300PX;
 }
 /* menu_drinks_box 끝 */
-
 /* menu_container 끝 */
 
+/* storage_guide_container 시작 */
+.storage_guide_container {
+    background: url(../img/Storage_img.png);
+    width: 100%;
+    height: 2533px;
+}
 
+.stitle_text_box {
+    text-align: center;
+    padding-top: 450px;
+}
+
+.title_text_kr > span {
+    font-size: 48px;
+    margin-top: 12px;
+}
+
+.title_text_kr > span::before {
+    background: url(../img/highlighter.png)no-repeat;
+    content: '';
+    width: 218px;
+    height: 36px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-20px,10px);
+}
+
+/* storage_guide_container 끝 */
+
+/* store_container 시작 */
+.store_container {
+    position: absolute;
+    width: 100%;
+}
+/* store_container 끝 */
 /* footer 시작 */
-
 footer {
     width: 100%;
     height: 270px;
