@@ -23,6 +23,10 @@
     font-optical-sizing: auto;
     font-style: normal;
   }
+
+  p:lang(en) {
+    font-family: "PT Serif", serif;
+  }
 /* font 끝 */
 
 /* main_container 시작 */
@@ -157,6 +161,12 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
+.bagel_name1 > p,
+.bagel_name2 > p,
+.bagel_name3 > p {
+    margin-bottom: 6px;
+}
 /* best_carousel_container 끝 */
 
 /* menu_container 시작 */
@@ -174,19 +184,23 @@ h2 {
     top: -500px;
     padding-top: 480px;
 }
+
 /* text_box 시작 */
-.text_box > p,
 .text_box > h2,
-.goods_text_box > p,
-.goods_text_box > h2 { 
-    margin-bottom: 12px;
+.goods_text_box > h2 {
+    margin-bottom: 24px;
+}
+
+.text_box > p,
+.goods_text_box > p { 
+    margin-bottom: 8px;
 }
 /* text_box 끝 */
 
 /* more_btn 시작 */
 .more_btn {
     border: none;
-    margin-top: 26px;
+    margin-top: 24px;
     padding: 12px 15px;
     background-color: #32281F;
     cursor: pointer;
@@ -196,6 +210,7 @@ h2 {
     text-decoration: none;
     color: #fff;
     padding: 12px 15px;
+    font-family: "PT Serif", serif;
 }
 
 .more_btn:hover {
