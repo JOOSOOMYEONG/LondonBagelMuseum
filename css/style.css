@@ -278,7 +278,7 @@ h2 {
 .storage_guide_container {
     background: url(../img/Storage_img.png);
     width: 100%;
-    height: 2533px;
+    height: 1700px;
 }
 
 .stitle_text_box {
@@ -301,12 +301,87 @@ h2 {
     transform: translate(-20px,10px);
 }
 
+/* tap_menu 시작 */
+.tabs_box > div {
+    text-align: center;
+}
+.tabs_box {
+    position: relative;
+    margin: 50px;
+}
+
+.menu_tabs {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+} 
+
+.tab {
+    width: 535px;
+    height: 230px;
+    background-color: transparent;
+    font-size: 75px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    color: #32281F;
+    align-items: center;
+    text-align: center;
+    line-height: 230px;
+    cursor: pointer;
+}
+
+.tab_content {
+    width: 100%;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 510px;
+}
+
+.content_box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 60px 120px;
+    gap: 80px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #B8B8B8;
+    width: 1365px;
+    height: 390px;
+}
+
+.content_box > div > p {
+    padding-bottom: 24px;
+    text-align: left;
+}
+
+.content_box > p {
+    padding-bottom: 24px;
+    text-align: left;
+}
+
+.tab_content.active {
+    display: flex;
+}
+
+.tab.active {
+    background-color: #B8B8B8;
+}
+/* tap_menu 끝 */
+
 /* storage_guide_container 끝 */
 
 /* store_container 시작 */
 .store_container {
-    position: absolute;
+    background: url(../img/store_img.png);
     width: 100%;
+    height: 829px;
 }
 /* store_container 끝 */
 /* footer 시작 */
@@ -318,7 +393,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 footer > figure {
