@@ -276,9 +276,13 @@ h2 {
 
 /* storage_guide_container 시작 */
 .storage_guide_container {
-    background: url(../img/Storage_img.png);
     width: 100%;
+}
+
+.storage_guide_bg {
+    background: url(../img/Storage_img.png);
     height: 1700px;
+
 }
 
 .stitle_text_box {
@@ -289,15 +293,13 @@ h2 {
 .title_text_kr {
     font-size: 48px;
     color: #32281F;
-    font-weight: 600
-    ;
-}
-
-.title_text_kr > span {
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
     margin-top: 12px;
 }
 
-.title_text_kr > span::before {
+.title_text_kr::before {
     background: url(../img/highlighter.png)no-repeat;
     content: '';
     width: 218px;
@@ -305,15 +307,27 @@ h2 {
     display: inline-block;
     position: absolute;
     transform: translate(-20px,10px);
+    z-index: -1;
+}
+
+.store_title_text_kr {
+    font-size: 48px;
+    color: #32281F;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    margin-top: 12px;
 }
 
 /* tap_menu 시작 */
-.tabs_box > div {
+.tabs_box > figure {
     text-align: center;
+    transform: translateY(10px);
 }
 .tabs_box {
     position: relative;
     margin: 50px;
+    z-index: 99;
 }
 
 .menu_tabs {
@@ -355,21 +369,29 @@ h2 {
     position: absolute;
     padding: 60px 120px;
     gap: 80px;
-    font-size: 24px;
-    font-weight: 500;
     background-color: #B8B8B8;
     width: 1365px;
     height: 390px;
 }
 
 .content_box > div > p {
-    padding-bottom: 24px;
-    text-align: left;
+    padding-bottom: 15px;
+    text-align: justify;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #32281F;
 }
 
 .content_box > p {
     padding-bottom: 24px;
-    text-align: left;
+    text-align: justify;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #32281F;
 }
 
 .tab_content.active {
@@ -393,11 +415,16 @@ h2 {
     gap: 28px;
 }
 
-.test {
+.store_maps {
     width: 850px;
     height: 620px;
-    background-color: #B8B8B8;
     border-radius: 100px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 .search {
