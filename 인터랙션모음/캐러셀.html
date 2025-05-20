@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Carousel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+    }
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+      max-width: 1200px;
+      position: relative;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-item {
+      flex-shrink: 0;
+      width: 327px;
+      height: 327px;
+      margin: 0 10px;
+      background: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    }
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #999;
+      margin: 0 5px;
+      transition: background 0.3s;
+    }
+    .dot.active {
+      background: #333;
+    }
+    @media (max-width: 1200px) and (min-width: 761px) {
+      .carousel-item {
+        width: 250px;
+        height: 250px;
+      }
+    }
+    @media (max-width: 760px) {
+      .carousel-item {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel-track" id="track">
+      <!-- Clones for infinite scroll -->
+      <div class="carousel-item">5</div>
+      <div class="carousel-item">6</div>
+
+      <!-- Real items -->
+      <div class="carousel-item">1</div>
+      <div class="carousel-item">2</div>
+      <div class="carousel-item">3</div>
+      <div class="carousel-item">4</div>
+      <div class="carousel-item">5</div>
+      <div class="carousel-item">6</div>
+
+      <!-- Clones for infinite scroll -->
+      <div class="carousel-item">1</div>
+      <div class="carousel-item">2</div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <script>
+    const track = document.getElementById('track');
+    const dotsContainer = document.getElementById('dots');
+    const total = 6;
+    let visibleCount = 3;
+    let itemWidth = 327;
+    let currentIndex = 2; // Starts at 6,1,2 -> index 2 is item '1'
+    let autoSlideInterval;
+
+    function updateResponsiveSettings() {
+      const width = window.innerWidth;
+      if (width > 1200) {
+        visibleCount = 3;
+        itemWidth = 327;
+        currentIndex = 2; // Start at '1'
+      } else if (width > 760) {
+        visibleCount = 2;
+        itemWidth = 250;
+        currentIndex = 2; // Start at '1'
+      } else {
+        visibleCount = 1;
+        itemWidth = 250;
+        currentIndex = 2; // Start at '1'
+      }
+    }
+
+    function createDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      let activeDotIndex;
+      if (visibleCount === 3) {
+        activeDotIndex = (currentIndex - 2 + total) % total;
+      } else {
+        activeDotIndex = (currentIndex - 2 + total) % total;
+      }
+
+      dots[activeDotIndex].classList.add('active');
+    }
+
+    function moveSlide(instant = false) {
+      const offset = currentIndex * (itemWidth + 20);
+      track.style.transition = instant ? 'none' : 'transform 0.5s ease-in-out';
+      track.style.transform = `translateX(-${offset}px)`;
+      updateDots();
+    }
+
+    function nextSlide() {
+      currentIndex++;
+      moveSlide();
+
+      const resetIndex = 2; // where '1' starts
+      const maxIndex = total + 2; // after real items and clones
+
+      if (currentIndex >= maxIndex) {
+        setTimeout(() => {
+          track.style.transition = 'none';
+          currentIndex = resetIndex;
+          moveSlide(true);
+        }, 500);
+      }
+    }
+
+    function initializeCarousel() {
+      updateResponsiveSettings();
+      createDots();
+      moveSlide(true);
+      updateDots();
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(() => {
+        nextSlide();
+      }, 3000);
+    }
+
+    initializeCarousel();
+    window.addEventListener('resize', initializeCarousel);
+  </script>
+</body>
+</html>

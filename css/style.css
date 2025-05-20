@@ -29,6 +29,40 @@
   }
 /* font 끝 */
 
+/* fade_in 스크롤 시작 */
+
+.to_bottom {
+    transform: translateY(200px);
+}
+
+.to_left {
+    transform: translateX(-200px);
+}
+
+.to_right {
+    transform: translateX(200px);
+}
+
+.fade {
+    opacity: 0;
+    transition: 1s;
+}
+
+.in {
+    transform: none;
+    opacity: 1;
+}
+
+.delay {
+    transition-delay: 0.3s;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* fade_in 스크롤 끝 */
+
 /* main_container 시작 */
 .main_container {
     font-family: "Antonio", sans-serif;
