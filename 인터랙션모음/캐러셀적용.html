@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>도넛 슬라이드</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    .carousel-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      flex: 0 0 33.3333%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+
+    }
+
+    .slide-label {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-label-text {
+      text-align: center;
+      line-height: 1.2;
+      color: #000000;
+    }
+
+    .slide-label-text .eng {
+      font-family: "PT Serif", serif;
+      font-size: 16px;
+      display: block;
+    }
+
+    .slide-label-text .kor {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 16px;
+      display: block;
+      margin-top: 6px;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      z-index: 1;
+    }
+
+    .carousel-buttons button {
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    .carousel-dots {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .carousel-dots button {
+      background: #776653;
+      border: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-dots button.active {
+      background: #32281F;
+    }
+
+    @media (max-width: 1023px) {
+      .carousel-slide { flex: 0 0 50%; }
+    }
+
+    @media (max-width: 767px) {
+      .carousel-slide { flex: 0 0 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel-container">
+    <div class="carousel-track" id="carousel-track"></div>
+
+    <div class="carousel-buttons">
+      <button id="prevBtn">&#10094;</button>
+      <button id="nextBtn">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="carousel-dots" id="carousel-dots"></div>
+
+  <script>
+    const track = document.getElementById('carousel-track');
+    const dotsContainer = document.getElementById('carousel-dots');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    const imageList = [
+      "../img/1.png",
+      "../img/2.png",
+      "../img/3.png",
+      "../img/4.png",
+      "../img/5.png",
+      "../img/6.png"
+    ];
+
+    const labelList = [
+      "Potato Cheese Bagel\n감자 치즈 베이글",
+      "Pretzel Butter Bagel\n프레첼 버터 베이글",
+      "Spring Onion Bagel\n쪽파 베이글",
+      "Pretzel Plain Bagel\n프레첼 플레인 베이글",
+      "Cheese Honey Bagel\n치즈 허니 베이글",
+      "Plain Bagel\n플레인 베이글"
+    ];
+
+    const labelBgList = [
+      "../img/memo1.png",
+      "../img/memo2.png",
+      "../img/memo3.png",
+      "../img/memo1.png",
+      "../img/memo2.png",
+      "../img/memo3.png"
+    ];
+
+    let slideCount = imageList.length;
+    let currentIndex = 0;
+    let visibleCount = getVisibleCount();
+
+    function renderSlides() {
+      track.innerHTML = '';
+      const totalImages = [...imageList.slice(-visibleCount), ...imageList, ...imageList.slice(0, visibleCount)];
+      const totalLabels = [...labelList.slice(-visibleCount), ...labelList, ...labelList.slice(0, visibleCount)];
+      const totalBgs = [...labelBgList.slice(-visibleCount), ...labelBgList, ...labelBgList.slice(0, visibleCount)];
+
+      totalImages.forEach((src, idx) => {
+        const [eng, kor] = totalLabels[idx].split('\n');
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        slide.innerHTML = `
+          <img src="${src}" alt="">
+          <div class="slide-label" style="background-image: url('${totalBgs[idx]}')">
+            <div class="slide-label-text">
+              <span class="eng">${eng}</span>
+              <span class="kor">${kor}</span>
+            </div>
+          </div>
+        `;
+        track.appendChild(slide);
+      });
+    }
+
+    function renderDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < slideCount; i++) {
+        const dot = document.createElement('button');
+        if (i === 0) dot.classList.add('active');
+        dot.dataset.index = i;
+        dot.addEventListener('click', () => {
+          goToSlide(i);
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function getVisibleCount() {
+      if (window.innerWidth < 768) return 1;
+      else if (window.innerWidth < 1024) return 2;
+      else return 3;
+    }
+
+    function updateCarousel(instant = false) {
+      const slideWidth = track.children[0].getBoundingClientRect().width;
+      const offset = (currentIndex + visibleCount) * slideWidth;
+      track.style.transition = instant ? "none" : "transform 0.5s ease-in-out";
+      track.style.transform = `translateX(-${offset}px)`;
+
+      const dots = dotsContainer.querySelectorAll('button');
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+
+    function moveToNext() {
+      currentIndex++;
+      updateCarousel();
+      if (currentIndex >= slideCount) {
+        setTimeout(() => {
+          currentIndex = 0;
+          updateCarousel(true);
+        }, 500);
+      }
+    }
+
+    function moveToPrev() {
+      currentIndex--;
+      updateCarousel();
+      if (currentIndex < 0) {
+        setTimeout(() => {
+          currentIndex = slideCount - 1;
+          updateCarousel(true);
+        }, 500);
+      }
+    }
+
+    let autoSlide = setInterval(moveToNext, 3000);
+
+    nextBtn.addEventListener('click', () => {
+      moveToNext();
+      resetAuto();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      moveToPrev();
+      resetAuto();
+    });
+
+    function resetAuto() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(moveToNext, 3000);
+    }
+
+    function initCarousel() {
+      visibleCount = getVisibleCount();
+      renderSlides();
+      renderDots();
+      currentIndex = 0;
+      updateCarousel(true);
+    }
+
+    window.addEventListener('resize', () => {
+      initCarousel();
+    });
+
+    initCarousel();
+  </script>
+</body>
+</html>

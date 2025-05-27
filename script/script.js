@@ -56,3 +56,151 @@ window.addEventListener('scroll',()=>{
         }
     }
 });
+
+// 반응형 캐러셀
+const track = document.getElementById('carousel-track');
+const dotsContainer = document.getElementById('carousel-dots');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+const imageList = [
+  "../img/1.png",
+  "../img/2.png",
+  "../img/3.png",
+  "../img/4.png",
+  "../img/5.png",
+  "../img/6.png"
+];
+
+const labelList = [
+  "Potato Cheese Bagel\n감자 치즈 베이글",
+  "Pretzel Butter Bagel\n프레첼 버터 베이글",
+  "Spring Onion Bagel\n쪽파 베이글",
+  "Pretzel Plain Bagel\n프레첼 플레인 베이글",
+  "Cheese Honey Bagel\n치즈 허니 베이글",
+  "Plain Bagel\n플레인 베이글"
+];
+
+const labelBgList = [
+  "../img/memo1.png",
+  "../img/memo2.png",
+  "../img/memo3.png",
+  "../img/memo1.png",
+  "../img/memo2.png",
+  "../img/memo3.png"
+];
+
+let slideCount = imageList.length;
+let currentIndex = 0;
+let visibleCount = getVisibleCount();
+
+function renderSlides() {
+  track.innerHTML = '';
+  const totalImages = [...imageList.slice(-visibleCount), ...imageList, ...imageList.slice(0, visibleCount)];
+  const totalLabels = [...labelList.slice(-visibleCount), ...labelList, ...labelList.slice(0, visibleCount)];
+  const totalBgs = [...labelBgList.slice(-visibleCount), ...labelBgList, ...labelBgList.slice(0, visibleCount)];
+
+  totalImages.forEach((src, idx) => {
+    const [eng, kor] = totalLabels[idx].split('\n');
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+    slide.innerHTML = `
+      <img src="${src}" alt="">
+      <div class="slide-label" style="background-image: url('${totalBgs[idx]}')">
+        <div class="slide-label-text">
+          <span class="eng">${eng}</span>
+          <span class="kor">${kor}</span>
+        </div>
+      </div>
+    `;
+    track.appendChild(slide);
+  });
+}
+
+function renderDots() {
+  dotsContainer.innerHTML = '';
+  for (let i = 0; i < slideCount; i++) {
+    const dot = document.createElement('button');
+    if (i === 0) dot.classList.add('active');
+    dot.dataset.index = i;
+    dot.addEventListener('click', () => {
+      goToSlide(i);
+    });
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function getVisibleCount() {
+  if (window.innerWidth < 768) return 1;
+  else if (window.innerWidth < 1024) return 2;
+  else return 3;
+}
+
+function updateCarousel(instant = false) {
+  const slideWidth = track.children[0].getBoundingClientRect().width;
+  const offset = (currentIndex + visibleCount) * slideWidth;
+  track.style.transition = instant ? "none" : "transform 0.5s ease-in-out";
+  track.style.transform = `translateX(-${offset}px)`;
+
+  const dots = dotsContainer.querySelectorAll('button');
+  dots.forEach(dot => dot.classList.remove('active'));
+  if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+}
+
+function goToSlide(index) {
+  currentIndex = index;
+  updateCarousel();
+}
+
+function moveToNext() {
+  currentIndex++;
+  updateCarousel();
+  if (currentIndex >= slideCount) {
+    setTimeout(() => {
+      currentIndex = 0;
+      updateCarousel(true);
+    }, 500);
+  }
+}
+
+function moveToPrev() {
+  currentIndex--;
+  updateCarousel();
+  if (currentIndex < 0) {
+    setTimeout(() => {
+      currentIndex = slideCount - 1;
+      updateCarousel(true);
+    }, 500);
+  }
+}
+
+let autoSlide = setInterval(moveToNext, 3000);
+
+nextBtn.addEventListener('click', () => {
+  moveToNext();
+  resetAuto();
+});
+
+prevBtn.addEventListener('click', () => {
+  moveToPrev();
+  resetAuto();
+});
+
+function resetAuto() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(moveToNext, 3000);
+}
+
+function initCarousel() {
+  visibleCount = getVisibleCount();
+  renderSlides();
+  renderDots();
+  currentIndex = 0;
+  updateCarousel(true);
+}
+
+window.addEventListener('resize', () => {
+  initCarousel();
+});
+
+initCarousel();

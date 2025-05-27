@@ -136,7 +136,7 @@ h2 {
     padding: 185px 0 128px 0;
 }
 
-.carousel_box {
+/*.carousel_box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,8 +200,124 @@ h2 {
 .bagel_name2 > p,
 .bagel_name3 > p {
     margin-bottom: 6px;
-}
+} */
 /* best_carousel_container 끝 */
+
+/* 반응형 캐러셀 시작 */
+.carousel-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc(100% / 3);
+    max-width: calc(100% / 3);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+
+  }
+
+  .slide-label {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide-label-text {
+    text-align: center;
+    line-height: 1.2;
+    color: #000000;
+  }
+
+  .slide-label-text .eng {
+    font-family: "PT Serif", serif;
+    font-size: 16px;
+    display: block;
+  }
+
+  .slide-label-text .kor {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    display: block;
+    margin-top: 6px;
+  }
+
+  .carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    z-index: 1;
+  }
+
+  .carousel-buttons button {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  .carousel-dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .carousel-dots button {
+    background: #776653;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .carousel-dots button.active {
+    background: #32281F;
+  }
+
+  @media (max-width: 1023px) {
+    .carousel-slide {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  @media (max-width: 767px) {
+    .carousel-slide {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+/* 반응형 캐러셀 끝 */
 
 /* menu_container 시작 */
 .menu_container {
