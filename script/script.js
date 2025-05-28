@@ -51,9 +51,6 @@ tabs.forEach(tab => {
 });
 
 
-
-
-
 // 지점검색
 const inputText = document.getElementById("input_text");
 let btn = document.querySelector(".search_btn");
@@ -68,10 +65,6 @@ window.addEventListener("keyup", (e)=> {
 function input() {
     window.open("https://www.google.com/maps/search/%EB%9F%B0%EB%8D%98%EB%B2%A0%EC%9D%B4%EA%B8%80%EB%AE%A4%EC%A7%80%EC%97%84" + inputText.value + "/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUwNS4wIKXMDSoASAFQAw%3D%3D");
 }
-
-
-
-
 
 
 // 스크롤페이드인
