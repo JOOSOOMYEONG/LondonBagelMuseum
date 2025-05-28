@@ -1,3 +1,38 @@
+// t슬라이드
+const slider = document.getElementById('slider');
+  const slides = slider.querySelectorAll('li');
+  const slideHeight = 500;
+  let index = 0;
+  let isTransitioning = false;
+
+  const moveToSlide  = () => {
+    slider.style.transition = 'transform 1s ease-in-out';
+    slider.style.transform = `translateY(-${slideHeight * index}px)`;
+  };
+
+  const resetToFirst = () => {
+    slider.style.transition = 'none';
+    slider.style.transform = 'translateY(0)';
+    index = 0;
+  };
+
+  slider.addEventListener('transitionend', () => {
+    if (index === slides.length - 1) {
+      resetToFirst();
+    }
+  });
+
+  setInterval(() => {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    index++;
+    moveToSlide ();
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 1100);
+  }, 3000);
+
+
 //  탭메뉴
 const tabs = document.querySelectorAll('.tab');
 const tabContent = document.querySelectorAll('.tab_content');

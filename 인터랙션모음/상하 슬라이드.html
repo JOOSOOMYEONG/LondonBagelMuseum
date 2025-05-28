@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>ul/li 세로 슬라이드</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #eee;
+    }
+
+    .slider-container {
+      width: 800px;
+      height: 500px;
+      overflow: hidden;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .column_slider {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      transition: transform 1s ease-in-out;
+    }
+
+    .column_slider li {
+      flex: 0 0 500px;
+      width: 100%;
+    }
+
+    .column_slider li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <ul class="column_slider" id="slider">
+    <li><img src="../img2/dog1.jpg" alt="slide1"></li>
+    <li><img src="../img2/dog2.jpg" alt="slide2"></li>
+    <li><img src="../img2/dog3.jpg" alt="slide3"></li>
+    <li><img src="../img2/dog1.jpg" alt="slide1-clone"></li> <!-- 첫 이미지 복제 -->
+  </ul>
+</div>
+
+<script>
+  const slider = document.getElementById('slider');
+  const slides = slider.querySelectorAll('li');
+  const slideHeight = 500;
+  let index = 0;
+  let isTransitioning = false;
+
+  const moveToSlide  = () => {
+    slider.style.transition = 'transform 1s ease-in-out';
+    slider.style.transform = `translateY(-${slideHeight * index}px)`;
+  };
+
+  const resetToFirst = () => {
+    slider.style.transition = 'none';
+    slider.style.transform = 'translateY(0)';
+    index = 0;
+  };
+
+  slider.addEventListener('transitionend', () => {
+    if (index === slides.length - 1) {
+      resetToFirst();
+    }
+  });
+
+  setInterval(() => {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    index++;
+    moveToSlide ();
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 1100);
+  }, 3000);
+</script>
+
+</body>
+</html>

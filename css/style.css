@@ -79,7 +79,7 @@ header {
     border-bottom: 1px solid #000;
     padding-bottom: 25px;
     width: 80%;
-    margin:  0 auto;
+    margin: 0 auto;
 }
 
 .logo > a > img {
@@ -93,26 +93,69 @@ header {
 
 .main_content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.main_content > h1 {
+/* .main_content > h1 {
     font-size: 190px;
     font-weight: 900;
     margin-top: 40px;
     letter-spacing: -5px;
     line-height: 260px;
+} */
+
+h1 {
+   font-size: 190px;
+    font-weight: 900;
+    margin-top: 40px;
+    letter-spacing: -5px;
+    line-height: 260px; 
+}
+
+/* slider 시작 */
+.slider_container {
+    width: 1524px;
+    height: 480px;
+    overflow: hidden;
 }
 
 .column_slider {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    transition: transform 1s ease-in-out;
+    margin: 0;
+    padding: 0;
+    /* list-style: none;
     width: 80%;
     max-height: 480px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; */
 }
 
+.column_slider > li {
+    flex: 0 0 480px;
+    width: 100%;
+    height: 480px;
+}
+
+.column_slider > li > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* slider 끝 */
+/* main_container 끝 */
+
+/* best_carousel_container 시작 */
 h2 {
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
@@ -121,11 +164,9 @@ h2 {
     font-size: 72px;
     color: rgb(50, 40, 31);
 }
-/* main_container 끝 */
 
-/* best_carousel_container 시작 */
 .best_carousel_container {
-    background-image: url(/img/best_bg.png);
+    background-image: url(../img/best_bg.png);
     width: 100%;
     height: 1510px;
     position: relative;
@@ -136,74 +177,6 @@ h2 {
     padding: 185px 0 128px 0;
 }
 
-/*.carousel_box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-}
-
-.prev {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.next {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.carousel_menu_box {
-    display: flex;
-    gap: 60px;
-    justify-content: center;
-}
-
-.carousel_menu_box > li {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bagel_name1 {
-    background: url(/img/memo1.png);
-    width: 240px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.bagel_name2 {
-    background: url(/img/memo2.png);
-    width: 240px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.bagel_name3 {
-    background: url(/img/memo3.png);
-    width: 240px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.bagel_name1 > p,
-.bagel_name2 > p,
-.bagel_name3 > p {
-    margin-bottom: 6px;
-} */
-/* best_carousel_container 끝 */
-
-/* 반응형 캐러셀 시작 */
 .carousel-container {
     max-width: 1000px;
     margin: 50px auto;
