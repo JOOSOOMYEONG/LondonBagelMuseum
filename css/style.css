@@ -86,8 +86,8 @@ header {
     width: 94px;
 }
 
-.header_right_box > i {
-    font-size: 48px;
+.header_right_box > img {
+    width: 48px;
     cursor: pointer;
 }
 
@@ -100,14 +100,6 @@ header {
     margin: 0;
     padding: 0;
 }
-
-/* .main_content > h1 {
-    font-size: 190px;
-    font-weight: 900;
-    margin-top: 40px;
-    letter-spacing: -5px;
-    line-height: 260px;
-} */
 
 h1 {
    font-size: 190px;
@@ -131,13 +123,6 @@ h1 {
     transition: transform 1s ease-in-out;
     margin: 0;
     padding: 0;
-    /* list-style: none;
-    width: 80%;
-    max-height: 480px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    overflow: hidden; */
 }
 
 .column_slider > li {
@@ -278,7 +263,56 @@ h2 {
     background: #32281F;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
+    /* 태블릿 회면 */
+    
+    /* main_container 시작 */
+.main_container {
+    font-family: "Antonio", sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 25px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo > a > img {
+    width: 74px;
+}
+
+.header_right_box > img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.main_content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+   font-size: 190px;
+    font-weight: 900;
+    margin-top: 40px;
+    letter-spacing: -5px;
+    line-height: 260px; 
+}
+
+/* main_container 끝 */
     .carousel-slide {
       flex: 0 0 50%;
       max-width: 50%;
