@@ -1,7 +1,7 @@
 // t슬라이드
 const slider = document.getElementById('slider');
   const slides = slider.querySelectorAll('li');
-  const slideHeight = 500;
+  const slideHeight = 480;
   let index = 0;
   let isTransitioning = false;
 
@@ -159,7 +159,7 @@ function renderDots() {
 }
 
 function getVisibleCount() {
-  if (window.innerWidth < 768) return 1;
+  if (window.innerWidth < 768)  return 1;
   else if (window.innerWidth < 1024) return 2;
   else return 3;
 }
