@@ -82,13 +82,8 @@ h1 {
   }
 
   .carousel-slide {
-    flex: 0 0 calc(100% / 3);
-    max-width: calc(100% / 3);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex: 0 0 50%;
+    max-width: 50%;
     box-sizing: border-box;
   }
 
@@ -170,10 +165,6 @@ h1 {
   .carousel-dots button.active {
     background: #32281F;
   }
-    /* .carousel-slide {
-      flex: 0 0 50%;
-      max-width: 50%;
-    } */
 
     /* menu_container 시작 */
 .menu_container {
