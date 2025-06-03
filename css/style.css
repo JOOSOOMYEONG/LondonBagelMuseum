@@ -369,7 +369,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 65px;
-    margin-left: 400px;
+    margin-left: 90px;
     margin-top: 300PX;
 }
 /* menu_drinks_box 끝 */
@@ -387,7 +387,7 @@ h2 {
 
 .stitle_text_box {
     text-align: center;
-    padding-top: 450px;
+    padding-top: 350px;
 }
 
 .title_text_kr {

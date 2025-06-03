@@ -88,8 +88,10 @@
   }
 
   .menu_bagel_box > img {
-    width: 316px;
-    height: 369px;
+    /* width: 316px;
+    height: 369px; */
+    width: 45%;
+    height: 45%;
   }
 
   p {
@@ -132,12 +134,14 @@
   }
 
   .menu_goods_box > img {
-    width: 391px;
-    height: 313px;
+    /* width: 391px;
+    height: 313px; */
+    width: 50%;
+    height: 50%;
   }
   
   .menu_drinks_box {
-    margin: 383px 55px 0 143px;
+    margin: 383px 55px 0 100px;
   }
 
   .menu_drinks_box > img {
@@ -235,7 +239,62 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu_drinks_box > img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+
+@media (max-width: 766px) {
+  .main_content {
+    height: 700px;
+}
+
+  .best_carousel_container > h2 {
+    padding: 80px 0 20px 0;
+  }
+
+  .best_carousel_container {
+    background-image: url(../img/766_bg.png);
+    height: 925px;
+  }
+
+  .carousel-container {
+    margin: 20px auto;
+}
+
+  .menu_container {
+    height: 2962px;
+  }
+
+  .menu_bg {
+    background: url(../img/menu_bg_766.png);
+    height: 2420px;
+    padding-top: 350px;
+    top: -222px;
+  }
+
+  .menu_bagel_box {
+    margin-left: 40px;
+  }
+
+  .menu_side_box {
+    margin-top: 100px;
+  }
+
+  .menu_goods_box {
+    margin: 200px 85px 0 60px;
+  }
+
+  .menu_drinks_box {
+    margin: 180px 40px 0 40px;
+}
+}
+
+
+@media (max-width: 360px) {
   /* main_container 시작 */
   .logo > a > img {
     width: 48px;
