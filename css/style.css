@@ -1,8 +1,8 @@
 /* font 시작 */
 .antonio-uniquifier {
-  font-family: "Antonio", sans-serif;
-  font-weight: weight;
-  font-style: normal;
+    font-family: "Antonio", sans-serif;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .roboto-condensed-uniquifier {
@@ -10,23 +10,27 @@
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-  }
+}
 
 .pt-serif-regular {
     font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-.noto-sans-krz{
+}
+
+.noto-sans-krz {
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-  }
+}
 
-  p:lang(en) {
+p:lang(en) {
     font-family: "PT Serif", serif;
-  }
+}
+
+p {
+    line-height: 1.2;
+}
 /* font 끝 */
 
 /* fade_in 스크롤 시작 */
@@ -60,7 +64,6 @@
 body {
     overflow-x: hidden;
 }
-
 /* fade_in 스크롤 끝 */
 
 /* main_container 시작 */
@@ -82,11 +85,11 @@ header {
     margin: 0 auto;
 }
 
-.logo > a > img {
+.logo>a>img {
     width: 94px;
 }
 
-.header_right_box > img {
+.header_right_box>img {
     width: 48px;
     cursor: pointer;
 }
@@ -102,11 +105,11 @@ header {
 }
 
 h1 {
-   font-size: 190px;
+    font-size: 190px;
     font-weight: 900;
     margin-top: 40px;
     letter-spacing: -5px;
-    line-height: 260px; 
+    line-height: 260px;
 }
 
 /* slider 시작 */
@@ -125,13 +128,13 @@ h1 {
     padding: 0;
 }
 
-.column_slider > li {
+.column_slider>li {
     flex: 0 0 480px;
     width: 100%;
     height: 480px;
 }
 
-.column_slider > li > img {
+.column_slider>li>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -167,14 +170,14 @@ h2 {
     margin: 50px auto;
     overflow: hidden;
     position: relative;
-  }
+}
 
-  .carousel-track {
+.carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
+}
 
-  .carousel-slide {
+.carousel-slide {
     flex: 0 0 calc(100% / 3);
     max-width: calc(100% / 3);
     padding: 10px;
@@ -183,16 +186,16 @@ h2 {
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-  }
+}
 
-  .carousel-slide img {
+.carousel-slide img {
     width: 100%;
     display: block;
     border-radius: 10px;
 
-  }
+}
 
-  .slide-label {
+.slide-label {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -201,28 +204,28 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .slide-label-text {
+.slide-label-text {
     text-align: center;
     line-height: 1.2;
     color: #000000;
-  }
+}
 
-  .slide-label-text .eng {
+.slide-label-text .eng {
     font-family: "PT Serif", serif;
     font-size: 16px;
     display: block;
-  }
+}
 
-  .slide-label-text .kor {
+.slide-label-text .kor {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     display: block;
     margin-top: 6px;
-  }
+}
 
-  .carousel-buttons {
+.carousel-buttons {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -231,9 +234,9 @@ h2 {
     transform: translateY(-50%);
     padding: 0 20px;
     z-index: 1;
-  }
+}
 
-  .carousel-buttons button {
+.carousel-buttons button {
     background: rgba(0, 0, 0, 0.6);
     border: none;
     color: white;
@@ -242,14 +245,14 @@ h2 {
     padding: 10px;
     border-radius: 50%;
     opacity: 0;
-  }
+}
 
-  .carousel-dots {
+.carousel-dots {
     text-align: center;
     margin-top: 15px;
-  }
+}
 
-  .carousel-dots button {
+.carousel-dots button {
     background: #776653;
     border: none;
     width: 12px;
@@ -258,12 +261,11 @@ h2 {
     margin: 5px;
     cursor: pointer;
     transition: background 0.3s;
-  }
+}
 
-  .carousel-dots button.active {
+.carousel-dots button.active {
     background: #32281F;
-  }
-
+}
 /* 반응형 캐러셀 끝 */
 
 /* menu_container 시작 */
@@ -284,12 +286,12 @@ h2 {
 
 /* text_box 시작 */
 .text_box > h2,
-.goods_text_box > h2 {
+.goods_text_box>h2 {
     margin-bottom: 24px;
 }
 
 .text_box > p,
-.goods_text_box > p { 
+.goods_text_box > p {
     margin-bottom: 8px;
 }
 /* text_box 끝 */
@@ -303,7 +305,7 @@ h2 {
     cursor: pointer;
 }
 
-.more_btn > a {
+.more_btn>a {
     text-decoration: none;
     color: #fff;
     padding: 12px 15px;
@@ -331,15 +333,17 @@ h2 {
     height: 713px;
 }
 
-.side_text_img{
+.side_text_img {
     position: absolute;
     right: 5%;
+    cursor: pointer;
 }
 
 .side_img {
     position: absolute;
-    right:10%;
+    right: 10%;
     top: 30%;
+    cursor: pointer;
 }
 /* menu_side_box 끝 */
 
@@ -356,8 +360,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    text-align: end;
 }
-
 /* menu_goods_box 끝 */
 
 /* menu_drinks_box 시작 */
@@ -379,7 +383,6 @@ h2 {
 .storage_guide_bg {
     background: url(../img/Storage_img.png);
     height: 1700px;
-
 }
 
 .stitle_text_box {
@@ -403,12 +406,12 @@ h2 {
     height: 36px;
     display: inline-block;
     position: absolute;
-    transform: translate(-35px,10px);
+    transform: translate(-35px, 10px);
     z-index: -1;
 }
 
 .store_title_text_kr {
-    font-size: 40 px;
+    font-size: 40px;
     color: #32281F;
     font-weight: 600;
     position: relative;
@@ -417,10 +420,11 @@ h2 {
 }
 
 /* tap_menu 시작 */
-.tabs_box > figure {
+.tabs_box>figure {
     text-align: center;
     transform: translateY(10px);
 }
+
 .tabs_box {
     position: relative;
     margin: 50px;
@@ -432,7 +436,7 @@ h2 {
     justify-content: center;
     padding: 0;
     margin: 0;
-} 
+}
 
 .tab {
     width: 535px;
@@ -463,7 +467,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     padding: 60px 120px;
     gap: 80px;
     background-color: #B8B8B8;
@@ -471,7 +474,7 @@ h2 {
     height: 390px;
 }
 
-.content_box > div > p {
+.content_box>div>p {
     padding-bottom: 15px;
     text-align: justify;
     line-height: 28px;
@@ -481,7 +484,7 @@ h2 {
     color: #32281F;
 }
 
-.content_box > p {
+.content_box>p {
     padding-bottom: 24px;
     text-align: justify;
     line-height: 28px;
@@ -498,6 +501,7 @@ h2 {
 .tab.active {
     background-color: #B8B8B8;
 }
+
 /* tap_menu 끝 */
 
 /* storage_guide_container 끝 */
@@ -528,7 +532,7 @@ iframe {
     margin-left: 100px;
 }
 
-.store_text{
+.store_text {
     display: flex;
     align-items: baseline;
     gap: 20px;
@@ -543,9 +547,9 @@ iframe {
     margin: 12px 0 59px 0;
 }
 
-.search_box > input {
+.search_box>input {
     width: 670px;
-    height: 85px;
+    height: 90px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -555,7 +559,7 @@ iframe {
     outline: none;
 }
 
-.search_box > input::placeholder {
+.search_box>input::placeholder {
     color: #32281F;
 }
 
@@ -568,6 +572,7 @@ iframe {
     margin-right: 20px;
     padding: 0;
 }
+
 /* store_container 끝 */
 
 /* footer 시작 */
@@ -582,13 +587,15 @@ footer {
     align-items: center;
 }
 
-footer > figure {
+footer>figure {
     padding-bottom: 50px;
 }
+
 .info_texts {
     display: flex;
     justify-content: space-between;
     width: 50%;
     padding-bottom: 20px;
 }
+
 /* footer 끝 */
