@@ -16,7 +16,7 @@
     font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: normal;
-}
+  }
 
 .noto-sans-krz {
     font-family: "Noto Sans KR", sans-serif;
@@ -30,6 +30,8 @@ p:lang(en) {
 
 p {
     line-height: 1.2;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
 }
 /* font 끝 */
 
@@ -151,6 +153,7 @@ h2 {
     font-style: normal;
     font-size: 72px;
     color: rgb(50, 40, 31);
+    letter-spacing: -5px;
 }
 
 .best_carousel_container {
@@ -421,7 +424,7 @@ h2 {
 }
 
 /* tap_menu 시작 */
-.tabs_box>figure {
+.tabs_box > figure {
     text-align: center;
     transform: translateY(10px);
 }
@@ -440,7 +443,7 @@ h2 {
 }
 
 .tab {
-    width: 535px;
+    width: 500px;
     height: 100px;
     line-height: 100px;
     background-color: transparent;
@@ -451,6 +454,7 @@ h2 {
     align-items: center;
     text-align: center;
     cursor: pointer;
+    letter-spacing: -2px;
 }
 
 .tab_content {
@@ -460,7 +464,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 510px;
+    height: 500px;
 }
 
 .content_box {
@@ -468,14 +472,15 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 120px;
+    padding: 55px 120px;
     gap: 80px;
     background-color: #B8B8B8;
-    width: 1365px;
+    width: 1260px;
     height: 390px;
 }
 
-.content_box>div>p {
+.content_box > div > p {
+    width: 540px;
     padding-bottom: 15px;
     text-align: justify;
     line-height: 28px;
@@ -485,7 +490,8 @@ h2 {
     color: #32281F;
 }
 
-.content_box>p {
+.content_box > p {
+    width: 540px;
     padding-bottom: 24px;
     text-align: justify;
     line-height: 28px;

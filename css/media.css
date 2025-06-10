@@ -248,6 +248,28 @@
 
 
 @media (max-width: 766px) {
+  /* font */
+  h2 {
+    font-size: 54px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .slide-label-text .eng {
+    font-size: 12px;
+  }
+  
+  .slide-label-text .kor {
+    font-size: 12px;
+  }
+
+  .more_btn > a {
+    font-size: 10px;
+  }
+  /* font */
+
   .main_content {
     height: 700px;
 }
@@ -261,9 +283,10 @@
     height: 925px;
   }
 
+
   .carousel-container {
     margin: 20px auto;
-}
+  }
 
   .menu_container {
     height: 2962px;
