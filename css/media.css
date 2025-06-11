@@ -166,6 +166,10 @@
     height: 32px;
   }
 
+  .stitle_text_box {
+    padding-top: 355px;
+  }
+
   .tab {
     width: 270px;
     height: 80px;
@@ -279,7 +283,7 @@
   }
 
   .best_carousel_container {
-    background-image: url(../img/766_bg.png);
+    background-image: url(../img/768_bg.png);
     height: 925px;
   }
 
@@ -288,11 +292,11 @@
   }
 
   .menu_container {
-    height: 2962px;
+    height: 2465px;
   }
 
   .menu_bg {
-    background: url(../img/menu_bg_766.png);
+    background: url(../img/menu_bg_768.png);
     height: 2420px;
     padding-top: 350px;
     top: -222px;
@@ -313,6 +317,99 @@
   .menu_drinks_box {
     margin: 180px 40px 0 40px;
 }
+
+  /* storage_guide_container 시작 */
+  .storage_guide_bg {
+    background: url(../img/Storage_img_768.png);
+    height: 1464px;
+  }
+
+  .title_text_kr {
+    font-size: 32px;
+  }
+
+  .title_text_kr::before {
+    background: url(../img/highlighter_768.png)no-repeat;
+    width: 182px;
+    height: 40px;
+  }
+
+  .stitle_text_box {
+    padding-top: 192px;
+  }
+
+  .tab {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+  }
+  
+  .tab_content {
+    height: 957px;
+  }
+
+  .content_box {
+    flex-direction: column;
+    padding: 120px 85px;
+    width: 640px;
+    height: 717px;
+  }
+
+  .content_box > div > p {
+    padding-bottom: 12px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  .content_box > p {
+    padding-bottom: 12px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  /* storage_guide_container 끝 */
+
+  /* store_container 시작 */
+  .store_container {
+    background: url(../img/store_img_768.png);
+    height: 1307px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .store_title_text_kr {
+    font-size: 36px;
+  }
+
+  .search {
+    margin-left: 0;
+  }
+
+  .search > figure {
+    display: none;
+  }
+
+  .store_text {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+
+  .search_box {
+    width: 794px;
+    border: 2px solid #32281F;
+    margin: 12px 0 280px;
+  }
+
+  .search_box>input {
+    width: 794px;
+  }
+  /* store_container 끝 */
+
+  .info_texts {
+    width: 70%;
+  }
+
 }
 
 
