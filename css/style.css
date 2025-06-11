@@ -385,13 +385,13 @@ h2 {
 }
 
 .storage_guide_bg {
-    background: url(../img/Storage_img.png);
-    height: 1700px;
+    background: url(../img/Storage_img_1920.png);
+    height: 1530px;
 }
 
 .stitle_text_box {
     text-align: center;
-    padding-top: 350px;
+    padding-top: 450px;
 }
 
 .title_text_kr {
@@ -427,6 +427,12 @@ h2 {
 .tabs_box > figure {
     text-align: center;
     transform: translateY(10px);
+}
+
+.tabs_box > figure img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
 }
 
 .tabs_box {
@@ -480,7 +486,6 @@ h2 {
 }
 
 .content_box > div > p {
-    width: 540px;
     padding-bottom: 15px;
     text-align: justify;
     line-height: 28px;

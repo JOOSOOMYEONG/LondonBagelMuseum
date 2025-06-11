@@ -7,7 +7,7 @@
     flex-direction: column;
     padding: 120px 85px;
     width: auto;
-    height: 716px;
+    height: 717px;
   }
 }
 
@@ -181,7 +181,7 @@
     flex-direction: column;
     padding: 120px 85px;
     width: 640px;
-    height: 716px;
+    height: 717px;
   }
 
   .content_box > div > p {
@@ -247,7 +247,7 @@
 }
 
 
-@media (max-width: 766px) {
+@media (max-width: 768px) {
   /* font */
   h2 {
     font-size: 54px;
@@ -282,7 +282,6 @@
     background-image: url(../img/766_bg.png);
     height: 925px;
   }
-
 
   .carousel-container {
     margin: 20px auto;
@@ -536,6 +535,7 @@
   .tabs_box {
     margin: 40px 36px 72px;
   }
+  
   .tab {
     width: 96px;
     height: 56px;

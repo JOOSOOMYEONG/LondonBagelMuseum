@@ -161,10 +161,14 @@
             <!-- 탭 메뉴 시작 -->
             <div class="tabs_box">
                 <figure>
-                    <img src="./img/line.png" alt="">
-                    <img src="./img/line.png" alt="">
-                    <img src="./img/line.png" alt="">
-                </figure>
+                    <picture>
+                      <source media="(max-width: 360px)" srcset="./img/line_360.png">
+                      <source media="(max-width: 768px)" srcset="./img/line_768.png">
+                      <source media="(max-width: 1024px)" srcset="./img/line_1024.png">
+                      <img src="./img/line_1920.png" alt="선 이미지">
+                    </picture>
+                  </figure>
+                                    
                 <ul class="menu_tabs">
                     <li class="tab active" data-tab="1">
                         Bagel
