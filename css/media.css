@@ -325,13 +325,13 @@
   }
 
   .title_text_kr {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .title_text_kr::before {
     background: url(../img/highlighter_768.png)no-repeat;
     width: 182px;
-    height: 40px;
+    height: 30px;
   }
 
   .stitle_text_box {
@@ -342,30 +342,30 @@
     width: 200px;
     height: 100px;
     line-height: 100px;
-    font-size: 30px;
+    font-size: 40px;
   }
   
   .tab_content {
-    height: 957px;
+    height: 720px;
   }
 
   .content_box {
     flex-direction: column;
-    padding: 120px 85px;
-    width: 640px;
-    height: 717px;
+    padding: 93px 60px;
+    width: 480px; 
+    height: 534px;
   }
-
-  .content_box > div > p {
-    padding-bottom: 12px;
-    line-height: 24px;
-    font-size: 16px;
-  }
-
+  
   .content_box > p {
-    padding-bottom: 12px;
-    line-height: 24px;
-    font-size: 16px;
+    flex-direction: column;
+    padding: 93px 60px;
+    width: 480px; 
+    height: 534px;
+  }
+
+  .tab_img > img {
+    width: 480px;
+    height: 293px;
   }
   /* storage_guide_container 끝 */
 

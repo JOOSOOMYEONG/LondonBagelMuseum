@@ -395,6 +395,7 @@ h2 {
 }
 
 .title_text_kr {
+    font-family: "Noto Sans KR", sans-serif;
     font-size: 40px;
     color: #32281F;
     font-weight: 600;
