@@ -36,8 +36,6 @@ const slider = document.getElementById('slider');
 //  탭메뉴
 const tabs = document.querySelectorAll('.tab');
 const tabContent = document.querySelectorAll('.tab_content');
-console.log(tabs);
-console.log(tabContent);
 
 tabs.forEach(tab => {
       tab.addEventListener('click', () => {
@@ -45,8 +43,6 @@ tabs.forEach(tab => {
             tabContent.forEach(tcontent => tcontent.classList.remove('active'));
             tab.classList.add('active');
             document.getElementById('tab_' + tab.dataset.tab).classList.add('active');
-            console.log(tab.dataset);
-            console.log(tab.dataset.tab);
       });
 });
 
@@ -70,13 +66,13 @@ function input() {
 // 스크롤페이드인
 
 const content = document.getElementsByClassName("content");
-console.log(content);
+
 window.addEventListener('scroll',()=>{
     const winH = window.innerHeight; // 전체 화면 높이 1080
-    console.log(winH);
+
     for(let i = 0; i < content.length; i++){
         const contentTop = content[i].getBoundingClientRect().top; 
-        console.log(contentTop);
+
         if(contentTop - winH < 0) {
             content[i].classList.add('in');
         }else{
