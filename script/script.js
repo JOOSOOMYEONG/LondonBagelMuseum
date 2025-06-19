@@ -88,12 +88,12 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 const imageList = [
-  "../img/1.png",
-  "../img/2.png",
-  "../img/3.png",
-  "../img/4.png",
-  "../img/5.png",
-  "../img/6.png"
+  "./img/1.png",
+  "./img/2.png",
+  "./img/3.png",
+  "./img/4.png",
+  "./img/5.png",
+  "./img/6.png"
 ];
 
 const labelList = [
@@ -106,12 +106,12 @@ const labelList = [
 ];
 
 const labelBgList = [
-  "../img/memo1.png",
-  "../img/memo2.png",
-  "../img/memo3.png",
-  "../img/memo1.png",
-  "../img/memo2.png",
-  "../img/memo3.png"
+  "./img/memo1.png",
+  "./img/memo2.png",
+  "./img/memo3.png",
+  "./img/memo1.png",
+  "./img/memo2.png",
+  "./img/memo3.png"
 ];
 
 let slideCount = imageList.length;
